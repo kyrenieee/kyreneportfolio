@@ -5,38 +5,31 @@ const PROJECTS_DATA = [
   {
     title: "UniSuki",
     desc: "Full-stack marketplace using MobileNetV2 image recognition for automated item classification.",
-    tags: ["Laravel", "React", "MobileNetV2"],
-    imageSrc: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop", // Replace with your local path e.g., "/assets/unisuki.png"
-    githubUrl: "https://github.com/kyrenieee/UniSuki"
-  },
-  {
-    title: "Dynamic Product Catalog",
-    desc: "CRUD application with custom routing algorithms and a highly responsive, anime-themed interface.",
-    tags: ["Laravel", "PHP", "MySQL"],
-    imageSrc: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop", 
-    githubUrl: "https://github.com/kyrenieee"
+    tags: ["React", "Tailwind CSS", "MobileNetV2"],
+    imageSrc: "/UniSuki.png", // Replace with your local path e.g., "/assets/unisuki.png"
+    githubUrl: "https://github.com/ARR2005/NewUnisuki"
   },
   {
     title: "Cinema Booking & Management",
     desc: "Web platform handling movie scheduling, dynamic seat reservations, and optimized relational SQL schema.",
-    tags: ["PHP", "HTML/CSS", "SQL Schema"],
-    imageSrc: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=800&auto=format&fit=crop", 
-    githubUrl: "https://github.com/kyrenieee"
+    tags: ["PHP", "SQL", "SQL Schema", "Laravel"],
+    imageSrc: "/Cinema.jpg", // Replace with your local path e.g., "/assets/cinema-booking.png"
+    githubUrl: "https://github.com/kyrenieee/Laravel-Cinema-Booking-System"
   },
   {
     title: "Piggy Lock UI/UX Prototype",
     desc: "A high-fidelity minimalist mobile application designed to streamline personal finance tracking. Features comprehensive user onboarding, interactive savings goal configurations, and real-time ledger journaling dashboards.",
     tags: ["Figma", "UI/UX Design", "Mobile Prototype"],
-    imageSrc: "/Piggy Lock.png", // Crop or save image_b62862.jpg into your public folder as Piggy Lock.png
-    projectUrl: "https://www.figma.com/design/EmmN7QxG1P6tL1yV5vODid/PIGGY-LOCK", // Your exact URL from the browser bar
+    imageSrc: "/PiggyLock.png", // Crop or save image_b62862.jpg into your public folder as Piggy Lock.png
+    projectUrl: "https://www.figma.com/proto/EmmN7QxG1P6tL1yV5vODid/PIGGY-LOCK?node-id=125-835&p=f&t=80NYObFEnZuG2SfW-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=125%3A835", // Your exact URL from the browser bar
     linkLabel: "Figma"
   },
   {
     title: "API Integration Showcase",
     desc: "Frontend JavaScript application featuring high-performance asynchronous REST API fetching and JSON parsing.",
     tags: ["JavaScript", "REST API", "JSON"],
-    imageSrc: "https://images.unsplash.com/photo-1627398242454-45a1465c2079?q=80&w=800&auto=format&fit=crop", 
-    githubUrl: "https://github.com/kyrenieee"
+    imageSrc: "/APICalls.png", // Replace with your local path e.g., "/assets/api-showcase.png"
+    githubUrl: "https://github.com/kyrenieee/api-calls"
   }
 ];
 

@@ -5,19 +5,16 @@ const CREDENTIALS_DATA = [
   {
     title: "Introduction to Artificial Intelligence (AI)",
     imageSrc: "/IBM Intro to AI.png",
-    imageUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop", 
     altText: "IBM Introduction to Artificial Intelligence Completion Certificate"
   },
   {
     title: "The Intelligence Behind AI",
     imageSrc: "/IBM Behind AI.png",
-    imageUrl: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=800&auto=format&fit=crop", 
     altText: "IBM SkillsBuild The Intelligence Behind AI Completion Certificate"
   },
   {
     title: "CCNA: Switching, Routing, and Wireless Essentials",
     imageSrc: "/CISCO.png",
-    imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop", 
     altText: "CCNA: Switching, Routing, and Wireless Essentials Certificate"
   },
   {
