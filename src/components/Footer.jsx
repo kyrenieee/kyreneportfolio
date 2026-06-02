@@ -10,7 +10,7 @@ export default function Footer() {
       {/* Main Heading */}
       <FadeInSection>
         <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-12">
-          Let's work together.
+          Contact Me.
         </h2>
       </FadeInSection>
 
@@ -58,7 +58,7 @@ export default function Footer() {
 
       {/* Copyright Footer Text */}
       <FadeInSection className="text-sm text-gray-600 font-medium tracking-tight">
-        &copy; {new Date().getFullYear()} Kyrene Camilla Estocapio. All rights reserved.
+        &copy; {new Date().getFullYear()} Kyrene Camilla Estocapio.
       </FadeInSection>
     </footer>
   );

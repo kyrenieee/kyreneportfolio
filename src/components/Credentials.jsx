@@ -38,7 +38,7 @@ export default function Credentials() {
       {/* Section Header */}
       <FadeInSection className="my-4">
         <h2 className="text-3xl font-extrabold text-white tracking-tight mb-4">Credentials & Certifications</h2>
-        <p className="text-gray-400 text-sm mb-16 max-w-xl">
+        <p className="text-gray-400 text-sm">
           Verified academic credentials, digital badging, and professional specializations achieved in software engineering and cloud systems.
         </p>
       </FadeInSection>
