@@ -25,7 +25,7 @@ export default function About() {
               className="flex flex-col sm:flex-row items-center justify-center gap-3 py-6 px-1 text-center text-gray-300 hover:text-white hover:bg-white/[0.04] transition-all duration-300 group relative"
             >
               <svg 
-                className="w-5 h-5 text-gray-400 group-hover:text-[#0052FF] transition-colors duration-300" 
+                className="w-5 h-5 text-gray-400 group-hover:text-[#500ac8] transition-colors duration-300" 
                 fill="currentColor" 
                 viewBox="0 0 24 24"
               >
@@ -40,7 +40,7 @@ export default function About() {
               className="flex flex-col sm:flex-row items-center justify-center gap-3 py-6 px-1 text-center text-gray-300 hover:text-white hover:bg-white/[0.04] transition-all duration-300 group relative"
             >
               <svg 
-                className="w-5 h-5 text-gray-400 group-hover:text-[#0052FF] transition-colors duration-300" 
+                className="w-5 h-5 text-gray-400 group-hover:text-[#500ac8] transition-colors duration-300" 
                 fill="currentColor" 
                 viewBox="0 0 24 24"
               >
@@ -56,7 +56,7 @@ export default function About() {
               className="flex flex-col sm:flex-row items-center justify-center gap-3 py-6 px-1 text-center text-gray-300 hover:text-white hover:bg-white/[0.04] transition-all duration-300 group relative"
             >
               <svg 
-                className="w-5 h-5 text-gray-400 group-hover:text-[#0052FF] transition-colors duration-300" 
+                className="w-5 h-5 text-gray-400 group-hover:text-[#500ac8] transition-colors duration-300" 
                 fill="currentColor" 
                 viewBox="0 0 24 24"
                 >

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="py-28 px-5 text-center border-t border-white/5 relative" id="contact">
       {/* Subtle bottom accent backdrop glow ring */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#0052FF]/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#500ac8]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
       <FadeInSection>
         <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-12">Let's work together.</h2>
@@ -21,6 +21,7 @@ export default function Footer() {
       <FadeInSection className="text-sm text-gray-600">
         &copy; {new Date().getFullYear()} Kyrene Camilla Estocapio. All rights reserved.
       </FadeInSection>
+
     </footer>
   );
 }

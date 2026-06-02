@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
           <a
             href="#projects"
-            className="inline-block bg-[#0052FF] hover:bg-[#0040cc] montserrat-standard text-white px-4 py-2.5 rounded-full font-semibold m-4 text-sm transition-all duration-300 hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(0,82,255,0.4)]"
+            className="inline-block bg-[#3c0b7d] hover:bg-[#500ac8] montserrat-standard text-white px-4 py-2.5 rounded-full font-semibold m-4 text-sm transition-all duration-300 hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(60,11,125,0.4)]"
           >
             View My Work
           </a>

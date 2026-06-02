@@ -49,7 +49,7 @@ export default function Credentials() {
               href={cred.imageUrl}
               target="_blank"
               rel="noreferrer"
-              className="block border border-white/10 rounded-2xl bg-white/[0.01] backdrop-blur-md overflow-hidden shadow-2xl shadow-black/80 group transition-all duration-500 hover:border-[#0052FF]/40 hover:shadow-[#0052FF]/5 relative cursor-pointer"
+              className="block border border-white/10 rounded-2xl bg-white/[0.01] backdrop-blur-md overflow-hidden shadow-2xl shadow-black/80 group transition-all duration-500 hover:border-[#500ac8]/40 hover:shadow-[#500ac8]/5 relative cursor-pointer"
             >
               
               {/* Aspect ratio box modeled after a standard certificate layout */}
@@ -64,7 +64,7 @@ export default function Credentials() {
 
               {/* Minimal Text Label Strip below the Image */}
               <div className="p-5 flex justify-between items-center bg-black/20">
-                <span className="font-bold text-sm text-gray-200 tracking-tight group-hover:text-[#0052FF] transition-colors duration-300">
+                <span className="font-bold text-sm text-gray-200 tracking-tight group-hover:text-[#500ac8] transition-colors duration-300">
                   {cred.title}
                 </span>
                 
