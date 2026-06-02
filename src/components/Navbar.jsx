@@ -1,7 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  // 🕵️‍♂️ Detect which section is currently active in the viewport
+  useEffect(() => {
+    const sections = ['about', 'skills', 'credentials', 'projects'];
+    
+    const observerOptions = {
+      root: null,
+      // Adjust rootMargin to trigger when section passes the upper-middle section of the screen
+      rootMargin: '-30% 0px -60% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, []);
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 px-4 max-w-[1200px] mx-auto">
@@ -13,17 +48,44 @@ export default function Navbar() {
           Kyrene.
         </a>
 
-        {/* Desktop Navigation Links (Hidden on mobile viewports) */}
+        {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#about" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
-          <a href="#skills" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">Skills</a>
-          <a href="#credentials" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">Credentials</a>
-          <a href="#projects" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">Projects</a>
+          <a 
+            href="#about" 
+            className={`text-sm font-medium transition-colors duration-300 ${
+              activeSection === 'about' ? 'text-[#9d4edd] font-semibold' : 'text-gray-400 hover:text-white'
+            }`}
+          >
+            About
+          </a>
+          <a 
+            href="#skills" 
+            className={`text-sm font-medium transition-colors duration-300 ${
+              activeSection === 'skills' ? 'text-[#9d4edd] font-semibold' : 'text-gray-400 hover:text-white'
+            }`}
+          >
+            Skills
+          </a>
+          <a 
+            href="#credentials" 
+            className={`text-sm font-medium transition-colors duration-300 ${
+              activeSection === 'credentials' ? 'text-[#9d4edd] font-semibold' : 'text-gray-400 hover:text-white'
+            }`}
+          >
+            Credentials
+          </a>
+          <a 
+            href="#projects" 
+            className={`text-sm font-medium transition-colors duration-300 ${
+              activeSection === 'projects' ? 'text-[#9d4edd] font-semibold' : 'text-gray-400 hover:text-white'
+            }`}
+          >
+            Projects
+          </a>
         </div>
 
         {/* Action Button & Mobile Toggle Wrapper */}
         <div className="flex items-center gap-4">
-          {/* Main Desktop Button (Hidden on extra small mobile screens if space is tight) */}
           <a 
             href="#contact" 
             className="hidden sm:inline-block bg-[#3c0b7d] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-[#500ac8] transition-all duration-300 shadow-lg shadow-[#3c0b7d]/20"
@@ -31,19 +93,17 @@ export default function Navbar() {
             Contact Me
           </a>
 
-          {/* Mobile Menu Interactive Toggle Button (Shows ONLY on mobile/minimized windows) */}
+          {/* Mobile Menu Toggle Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="block md:hidden text-gray-400 hover:text-white focus:outline-none p-1"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? (
-              // Close Icon (✕)
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              // Hamburger Menu Icon (☰)
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -62,28 +122,36 @@ export default function Navbar() {
           <a 
             href="#about" 
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-base font-semibold text-gray-300 hover:text-[#500ac8] transition-colors py-2 border-b border-white/5"
+            className={`text-base font-semibold transition-colors py-2 border-b border-white/5 ${
+              activeSection === 'about' ? 'text-[#9d4edd]' : 'text-gray-300 hover:text-[#500ac8]'
+            }`}
           >
             / About
           </a>
           <a 
             href="#skills" 
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-base font-semibold text-gray-300 hover:text-[#500ac8] transition-colors py-2 border-b border-white/5"
+            className={`text-base font-semibold transition-colors py-2 border-b border-white/5 ${
+              activeSection === 'skills' ? 'text-[#9d4edd]' : 'text-gray-300 hover:text-[#500ac8]'
+            }`}
           >
             / Skills
           </a>
           <a 
             href="#credentials" 
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-base font-semibold text-gray-300 hover:text-[#500ac8] transition-colors py-2 border-b border-white/5"
+            className={`text-base font-semibold transition-colors py-2 border-b border-white/5 ${
+              activeSection === 'credentials' ? 'text-[#9d4edd]' : 'text-gray-300 hover:text-[#500ac8]'
+            }`}
           >
             / Credentials
           </a>
           <a 
             href="#projects" 
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-base font-semibold text-gray-300 hover:text-[#500ac8] transition-colors py-2"
+            className={`text-base font-semibold transition-colors py-2 ${
+              activeSection === 'projects' ? 'text-[#9d4edd]' : 'text-gray-300 hover:text-[#500ac8]'
+            }`}
           >
             / Projects
           </a>
